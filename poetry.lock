@@ -61,6 +61,20 @@ django = ">=2.2"
 pytz = "*"
 
 [[package]]
+name = "gunicorn"
+version = "20.1.0"
+description = "WSGI HTTP Server for UNIX"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.extras]
+eventlet = ["eventlet (>=0.24.1)"]
+gevent = ["gevent (>=1.4.0)"]
+setproctitle = ["setproctitle"]
+tornado = ["tornado (>=0.2)"]
+
+[[package]]
 name = "pastel"
 version = "0.2.1"
 description = "Bring colors to your terminal."
@@ -118,7 +132,7 @@ python-versions = ">=2"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.13"
-content-hash = "d0d7d333ab699c06834dea6e62ed54f7e5dd10c7a711f55bfd11051d3917ab1f"
+content-hash = "a63a922d54aef33e3a9d107de84100c43552dedc6e3f9f5ea752303e90c2737b"
 
 [metadata.files]
 asgiref = []
@@ -126,6 +140,7 @@ django = []
 django-cors-headers = []
 django-rest-framework = []
 djangorestframework = []
+gunicorn = []
 pastel = []
 poethepoet = []
 pytz = []
