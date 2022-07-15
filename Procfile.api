@@ -1,2 +1,0 @@
-release: poetry run python api/manage.py migrate --noinput
-web: cd api && poetry run gunicorn api.wsgi
