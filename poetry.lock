@@ -61,6 +61,29 @@ django = ">=2.2"
 pytz = "*"
 
 [[package]]
+name = "pastel"
+version = "0.2.1"
+description = "Bring colors to your terminal."
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
+name = "poethepoet"
+version = "0.15.0"
+description = "A task runner that works well with poetry."
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+pastel = ">=0.2.1,<0.3.0"
+tomli = ">=1.2.2"
+
+[package.extras]
+poetry_plugin = ["poetry (>=1.0,<2.0)"]
+
+[[package]]
 name = "pytz"
 version = "2022.1"
 description = "World timezone definitions, modern and historical"
@@ -77,6 +100,14 @@ optional = false
 python-versions = ">=3.5"
 
 [[package]]
+name = "tomli"
+version = "2.0.1"
+description = "A lil' TOML parser"
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "tzdata"
 version = "2022.1"
 description = "Provider of IANA time zone data"
@@ -87,7 +118,7 @@ python-versions = ">=2"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "bc17ef424895d42a5128b10ff6062e83de300831181583f91841bdec05e132e6"
+content-hash = "5c29d312ddd83b5fec240c574367cbbfad7d56941f4a8e79ef9432ca451f90ce"
 
 [metadata.files]
 asgiref = []
@@ -95,6 +126,9 @@ django = []
 django-cors-headers = []
 django-rest-framework = []
 djangorestframework = []
+pastel = []
+poethepoet = []
 pytz = []
 sqlparse = []
+tomli = []
 tzdata = []
