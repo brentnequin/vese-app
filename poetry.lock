@@ -10,6 +10,14 @@ python-versions = ">=3.7"
 tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
 
 [[package]]
+name = "dj-database-url"
+version = "0.5.0"
+description = "Use Database URLs in your Django Application."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "django"
 version = "4.0.6"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
@@ -36,6 +44,20 @@ python-versions = ">=3.7"
 
 [package.dependencies]
 Django = ">=3.2"
+
+[[package]]
+name = "django-heroku"
+version = "0.3.1"
+description = "This is a Django library for Heroku apps."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+dj-database-url = ">=0.5.0"
+django = "*"
+psycopg2 = "*"
+whitenoise = "*"
 
 [[package]]
 name = "django-rest-framework"
@@ -98,6 +120,14 @@ tomli = ">=1.2.2"
 poetry_plugin = ["poetry (>=1.0,<2.0)"]
 
 [[package]]
+name = "psycopg2"
+version = "2.9.3"
+description = "psycopg2 - Python-PostgreSQL Database Adapter"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
 name = "pytz"
 version = "2022.1"
 description = "World timezone definitions, modern and historical"
@@ -129,21 +159,36 @@ category = "main"
 optional = false
 python-versions = ">=2"
 
+[[package]]
+name = "whitenoise"
+version = "6.2.0"
+description = "Radically simplified static file serving for WSGI applications"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+brotli = ["brotli"]
+
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.13"
-content-hash = "a63a922d54aef33e3a9d107de84100c43552dedc6e3f9f5ea752303e90c2737b"
+content-hash = "9753309c8f94255f72ec46c5e90001f4f2b80692afbdf2bb6f44d082e9ee514f"
 
 [metadata.files]
 asgiref = []
+dj-database-url = []
 django = []
 django-cors-headers = []
+django-heroku = []
 django-rest-framework = []
 djangorestframework = []
 gunicorn = []
 pastel = []
 poethepoet = []
+psycopg2 = []
 pytz = []
 sqlparse = []
 tomli = []
 tzdata = []
+whitenoise = []
