@@ -19,4 +19,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poe.tasks]
 ui-install = { shell = "cd client && yarn install" }
-ui-server = { shell = "cd client && yarn dev" } 
+ui-dev = { shell = "cd client && yarn dev" } 
+api-migrations = { shell = "python api/manage.py makemigrations && python api/manage.py migrate" }
+api-dev = { shell = "python api/manage.py runserver" }
