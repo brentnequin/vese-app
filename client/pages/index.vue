@@ -1,10 +1,11 @@
 <template>
   <b-container class="my-5">
-    
+
     <b-jumbotron header="VESE" lead="Vehicle Electronics and Systems Engineering">
+      <p>Expand the knowledge of students interested in vehicle electronics and systems engineering through hands on projects and close work with companies.</p>
       <divider />
-      <p>This is the website for VESE.</p>
-      <b-button variant="info" to="/about">More Info</b-button>
+      <p>Click the links below to learn more about VESE.</p>
+      <b-button variant="info" to="/about">About VESE</b-button>
       <b-button variant="secondary" to="#current-projects">Current Projects</b-button>
     </b-jumbotron>
 
