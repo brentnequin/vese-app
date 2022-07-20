@@ -1,7 +1,10 @@
 <template>
     <header>
         <b-navbar toggleable="lg" type="dark" variant="info">
-            <b-navbar-brand href="#">VESE</b-navbar-brand>
+            <b-navbar-brand href="#" class="brand">
+                <img fluid src="~/static/favicon.svg" class="d-inline-block align-center logo" alt="logo">
+                VESE
+            </b-navbar-brand>
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
             <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav class="ml-auto">

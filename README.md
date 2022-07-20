@@ -10,31 +10,42 @@
 
 ### Setup Instructions
 
-From the project root, setup the local backend environment by running:
+From the project root, setup the local *backend* environment by running:
 
 ```sh
 poetry shell
 poetry install
 ```
 
-Then setup the local frontend environment by running:
+Then setup the local *frontend* environment by running:
 
 ```sh
-poetry run poe ui-install
+yarn install
 ```
 
 ### Running the frontend server
 
-To start running a local instance of the frontend (Nuxt) server, run the following in the project root:
+To start running a local instance of the *frontend* (Nuxt) server, run the following in the project root:
 
 ```sh
-poetry run poe ui-server
+yarn dev
 ```
 
 ### Running the backend server
 
-To start running a local instance of the backend (Django) server, run the following in the project root:
+To start running a local instance of the *backend* (Django) server, run the following in the project root:
 
 ```sh
 poetry run python api/manage.py runserver
 ```
+
+## Heroku Setup
+
+### Buildpacks
+
+Here lists the buildpacks used for each app.
+
+#### Frontend (client)
+* [python-poetry-buildpack](https://github.com/moneymeets/python-poetry-buildpack.git)
+* heroku/python
+* [heroku-community/multi-procfile](https://elements.heroku.com/buildpacks/heroku/heroku-buildpack-multi-procfile)
