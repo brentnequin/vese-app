@@ -1,9 +1,3 @@
 <template>
-<div class="divider"></div>
+<hr class="my-4">
 </template>
-
-<style>
-.divider {
-    border-top: 1px solid #bbb;
-}
-</style>

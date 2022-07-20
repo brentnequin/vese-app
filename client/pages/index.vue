@@ -1,11 +1,15 @@
 <template>
   <b-container class="my-5">
+    
     <b-jumbotron header="VESE" lead="Vehicle Electronics and Systems Engineering">
-      <hr class="my-4">
+      <divider />
       <p>This is the website for VESE.</p>
       <b-button variant="info" to="/about">More Info</b-button>
       <b-button variant="secondary" to="#current-projects">Current Projects</b-button>
     </b-jumbotron>
+
+    <divider />
+
     <h2 id="current-projects">Current Projects</h2>
     <b-card-group deck>
       <b-card 
@@ -34,6 +38,7 @@
       </b-card>
     </b-card-group>
   </b-container>
+
 </template>
 
 <script>
