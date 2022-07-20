@@ -1,6 +1,6 @@
 <template>
     <header>
-        <b-navbar toggleable="lg" type="dark" variant="info">
+        <b-navbar toggleable="lg" type="dark" variant="secondary">
             <b-navbar-brand href="#" class="brand">
                 <img fluid src="~/static/favicon.svg" class="d-inline-block align-center logo" alt="logo">
                 VESE
