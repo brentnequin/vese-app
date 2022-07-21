@@ -18,6 +18,7 @@ export default {
         lead: String,
         bgImageSrc: String,
         imageAsset: Boolean,
+        bgColor: String,
         dark: Boolean,
         contain: Boolean
     },
@@ -25,10 +26,12 @@ export default {
         backgroundObject() {
             const imagePath = this.$img(this.bgImageSrc)
             return {
-                backgroundImage: this.imageAsset ? `url(${imagePath})` : `url(${imagePath})` ,
+                backgroundImage: `url(${imagePath})` ,
                 backgroundSize: this.contain ? 'contain' : 'cover',
                 backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
+                backgroundRepeat: 'no-repeat',
+                backgroundColor: this.bgColor,
+                minHeight: "20rem"
             }
         }
     }
