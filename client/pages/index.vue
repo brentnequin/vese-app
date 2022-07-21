@@ -1,8 +1,11 @@
 <template>
   <b-container class="my-5">
 
-    <b-jumbotron header="VESE" lead="Vehicle Electronics and Systems Engineering">
-      <p>Expand the knowledge of students interested in vehicle electronics and systems engineering through hands on projects and close work with companies.</p>
+    <jumbotron-hero bg-image-src="/VESE-01.png" bg-color="grey" contain>
+    </jumbotron-hero>
+    <b-jumbotron class="mb-5">
+      <p>Expand the knowledge of students interested in vehicle electronics and systems engineering through hands on
+        projects and close work with companies.</p>
       <divider />
       <p>Click the links below to learn more about VESE.</p>
       <b-button variant="info" to="/about">About VESE</b-button>
@@ -44,7 +47,9 @@
 </template>
 
 <script>
+import JumbotronHero from '../components/JumbotronHero.vue'
 export default {
+  components: { JumbotronHero },
   name: 'IndexPage'
 }
 </script>
