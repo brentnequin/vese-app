@@ -4,7 +4,7 @@
         Join the Team
     </h1>
     <p>
-        To join the team you must have at least 100 years of experience in Rust
+        To join the team you must have been coding at least since the beggining of time
     </p>
 </b-container>
 </template>
