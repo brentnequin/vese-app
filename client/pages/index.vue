@@ -1,7 +1,7 @@
 <template>
-  <b-container class="my-5">
-
-    <jumbotron-hero bg-image-src="/VESE-01.png" bg-color="grey" contain>
+  <b-container class="my-5">    
+    <masthead></masthead>
+    <jumbotron-hero bg-image-src="/VESE-01.png" bg-color="black" contain>
     </jumbotron-hero>
     <b-jumbotron class="mb-5">
       <p>Expand the knowledge of students interested in vehicle electronics and systems engineering through hands on
@@ -10,7 +10,7 @@
       <p>Click the links below to learn more about VESE.</p>
       <b-button variant="info" to="/about">About VESE</b-button>
       <b-button variant="secondary" to="#current-projects">Current Projects</b-button>
-      <b-button variant="secondary" to="#current-projects">Gallery</b-button>
+      <b-button variant="secondary" to="/gallery">Gallery</b-button>
     </b-jumbotron>
 
     <divider />
@@ -48,8 +48,9 @@
 
 <script>
 import JumbotronHero from '../components/JumbotronHero.vue'
+import Masthead from '~/components/Masthead.vue'
 export default {
-  components: { JumbotronHero },
+  components: { JumbotronHero, Masthead },
   name: 'IndexPage'
 }
 </script>
