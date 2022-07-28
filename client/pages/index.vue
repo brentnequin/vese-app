@@ -1,6 +1,9 @@
 <template>
-  <b-container class="my-5">
-
+<page>
+  <div slot="masthead">
+    THIS IS THE MASTHEAD
+  </div>
+  <b-container class="my-5" slot="content">
     <jumbotron-hero bg-image-src="/VESE-01.png" bg-color="grey" contain>
     </jumbotron-hero>
     <b-jumbotron class="mb-5">
@@ -43,13 +46,11 @@
       </b-card>
     </b-card-group>
   </b-container>
-
+  </page>
 </template>
 
 <script>
-import JumbotronHero from '../components/JumbotronHero.vue'
 export default {
-  components: { JumbotronHero },
-  name: 'IndexPage'
+    name: "IndexPage",
 }
 </script>

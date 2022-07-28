@@ -1,5 +1,5 @@
 <template>
-<b-container class="my-5">
+<b-container class="my-5" slot="content">
 
     <!-- <hero img-src="https://vese-uic.weebly.com/uploads/1/1/4/2/114284319/background-images/1491183464.jpg" /> -->
     <jumbotron-hero header="About VESE" lead="blah blah" bg-image-src="https://vese-uic.weebly.com/uploads/1/1/4/2/114284319/background-images/1491183464.jpg" dark />

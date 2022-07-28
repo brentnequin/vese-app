@@ -41,11 +41,11 @@ poetry run python api/manage.py runserver
 
 ## Heroku Setup
 
-### Frontend (client)
+### Backend (api)
 * [python-poetry-buildpack](https://github.com/moneymeets/python-poetry-buildpack.git)
 * heroku/python
 * [heroku-community/multi-procfile](https://elements.heroku.com/buildpacks/heroku/heroku-buildpack-multi-procfile)
 
-### Backend (api)
+### Frontend (client)
 * heroku/nodejs
 * [heroku-community/multi-procfile](https://elements.heroku.com/buildpacks/heroku/heroku-buildpack-multi-procfile)
