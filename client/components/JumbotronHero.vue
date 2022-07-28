@@ -1,11 +1,7 @@
 <template>
     <div :style="backgroundObject">
-        <b-jumbotron
-            :header="header"
-            :lead="lead"
-            style="background: transparent"
-            :class="dark ? 'text-white' : 'text-black'"
-        >
+        <b-jumbotron :header="header" :lead="lead" style="background: transparent"
+            :class="dark ? 'text-white' : 'text-black'" :fluid="fluid">
             <slot></slot>
         </b-jumbotron>
     </div>
@@ -16,17 +12,17 @@ export default {
     props: {
         header: String,
         lead: String,
-        bgImageSrc: String,
-        imageAsset: Boolean,
+        bgImgSrc: String,
         bgColor: String,
         dark: Boolean,
-        contain: Boolean
+        contain: Boolean,
+        fluid: Boolean
     },
     computed: {
         backgroundObject() {
-            const imagePath = this.$img(this.bgImageSrc)
+            const imagePath = this.$img(this.bgImgSrc)
             return {
-                backgroundImage: `url(${imagePath})` ,
+                backgroundImage: `url(${imagePath})`,
                 backgroundSize: this.contain ? 'contain' : 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',

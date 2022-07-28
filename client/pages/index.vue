@@ -1,11 +1,12 @@
 <template>
 <page>
-  <div slot="masthead">
-    THIS IS THE MASTHEAD
-  </div>
+  <jumbotron-hero
+    slot="masthead"
+    bg-img-src="rohan-gangopadhyay-heIaYq6A7tg-unsplash.jpg"
+    fluid
+  />
   <b-container class="my-5" slot="content">
-    <jumbotron-hero bg-image-src="/VESE-01.png" bg-color="grey" contain>
-    </jumbotron-hero>
+    <jumbotron-hero bg-img-src="/VESE-01.png" bg-color="grey" contain style="transform: translateY(-8rem)" />
     <b-jumbotron class="mb-5">
       <p>Expand the knowledge of students interested in vehicle electronics and systems engineering through hands on
         projects and close work with companies.</p>
@@ -50,7 +51,9 @@
 </template>
 
 <script>
+import JumbotronHero from '~/components/JumbotronHero.vue';
 export default {
     name: "IndexPage",
+    components: { JumbotronHero }
 }
 </script>
