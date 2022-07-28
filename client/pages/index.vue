@@ -11,7 +11,7 @@
         projects and close work with companies.</p>
       <divider />
       <p>Click the links below to learn more about VESE.</p>
-      <b-button variant="info" to="/about">About VESE</b-button>
+      <b-button variant="primary" to="/about">About VESE</b-button>
       <b-button variant="secondary" to="#current-projects">Current Projects</b-button>
       <b-button variant="secondary" to="#current-projects">Gallery</b-button>
     </b-jumbotron>

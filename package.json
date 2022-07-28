@@ -2,10 +2,7 @@
   "name": "client",
   "version": "1.0.0",
   "private": true,
-  "engines": {
-    
-  },
-
+  "engines": {},
   "scripts": {
     "dev": "nuxt client",
     "build": "nuxt build client",
@@ -14,6 +11,7 @@
     "help": "nuxt help"
   },
   "dependencies": {
+    "@nuxt/image": "^0.7.1",
     "@nuxtjs/axios": "^5.13.6",
     "bootstrap": "^4.6.1",
     "bootstrap-vue": "^2.21.2",
@@ -22,9 +20,10 @@
     "vue": "^2.6.14",
     "vue-server-renderer": "^2.6.14",
     "vue-template-compiler": "^2.6.14",
-    "webpack": "^4.46.0",
-    "@nuxt/image": "^0.7.1"
+    "webpack": "^4.46.0"
   },
   "devDependencies": {
+    "sass": "^1.54.0",
+    "sass-loader": "10.1.1"
   }
 }

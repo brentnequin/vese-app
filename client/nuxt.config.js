@@ -16,8 +16,16 @@ export default {
     ]
   },
 
+  rules: [
+    {
+      test: /\.s[ac]ss$/i,
+      use: ['style-loader', 'css-loader', 'sass-loader']
+    }
+  ],
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/scss/main.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -47,10 +55,17 @@ export default {
   },
 
   bootstrapVue: {
-    icons: true
+    icons: true,
+    bootstrapCSS: false,
+    bootstrapVueCSS: false
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    loaders: {
+      sass: { implementation: require('sass') },
+      scss: { implementation: require('sass') },
+
+    }
   }
 }
