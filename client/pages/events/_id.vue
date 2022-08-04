@@ -12,7 +12,7 @@
                 <p class="text-muted">{{ event.starttime }} - {{ event.endtime }} | {{ event.date }}</p>
                 <p>{{ event.fulldescription}}</p>
                 <div class="d-flex justify-content-center">
-                    <b-button v-for="(link, index) in event.links" v-bind:key="index" to="link.to" class="mx-3">{{ link.name }}</b-button>
+                    <b-button v-for="(link, index) in event.links" v-bind:key="index" :to="link.to" class="mx-3">{{ link.name }}</b-button>
                 </div>
             </b-media>
         </b-container>
