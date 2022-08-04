@@ -13,6 +13,7 @@
                     <b-nav-item to="/events">Events</b-nav-item>
                     <b-nav-item to="#">Members</b-nav-item>
                     <b-nav-item to="#">Log In</b-nav-item>
+                    <b-nav-item to="#">Donate</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>

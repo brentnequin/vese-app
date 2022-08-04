@@ -6,20 +6,22 @@
     fluid
   />
   <b-container class="my-5" slot="content">
-    <jumbotron-hero bg-img-src="/VESE-01.png" bg-color="grey" contain style="transform: translateY(-8rem)" />
+    <jumbotron-hero bg-img-src="/VESE-01.png" bg-color="black" contain style="transform: translateY(-8rem)" />
     <b-jumbotron class="mb-5">
-      <p>Expand the knowledge of students interested in vehicle electronics and systems engineering through hands on
+      <h1>Our Goal</h1>
+      <p>To expand the knowledge of students interested in vehicle electronics and systems engineering through hands on
         projects and close work with companies.</p>
       <divider />
       <p>Click the links below to learn more about VESE.</p>
       <b-button variant="primary" to="/about">About VESE</b-button>
       <b-button variant="secondary" to="#current-projects">Current Projects</b-button>
       <b-button variant="secondary" to="/gallery">Gallery</b-button>
+      <b-button variant="secondary" to="/login">Join Us</b-button> 
     </b-jumbotron>
 
     <divider />
 
-    <h2 id="current-projects">Current Projects</h2>
+    <h2 id="current-projects">News</h2>
     <b-card-group deck>
       <b-card 
         title="Mechatronics Team"
