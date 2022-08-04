@@ -18,27 +18,27 @@
     <h2 id="current-projects">Current Projects</h2>
     <b-card-group deck>
       <b-card 
-        title="FSAE Electric Vehicle"
+        title="Mechatronics Team"
         img-src="https://vese-uic.weebly.com/uploads/1/1/4/2/114284319/veseneon_orig.png"
         style="max-width: 20rem;"
       >
-        <b-card-text>VESE is leading the push for developing, manufacturing and racing the first ever UIC FSAE Electric vehicle.</b-card-text>
+        <b-card-text>VESE's mechatronics team is leading the push for developing, manufacturing and racing electric and autonomous vehicles.</b-card-text>
         <b-button to="#">Read More</b-button>
       </b-card>
       <b-card 
-        title="Mechanical Team"
+        title="Software Team"
         img-src="https://vese-uic.weebly.com/uploads/1/1/4/2/114284319/tesla-ipad-3_orig.jpg"
         style="max-width: 20rem;"
       >
-        <b-card-text>Mechanical Engineering students apply the information learned from class or on their own time to develop the systems of the FSAE Electric vehicle.</b-card-text>
+        <b-card-text> Our software team applies the information obtained from their research to advance the development of autonomous vehicles.</b-card-text>
         <b-button to="#">Read More</b-button>
       </b-card>
       <b-card 
-        title="Electrical team"
+        title="Avionics Team"
         img-src="https://vese-uic.weebly.com/uploads/1/1/4/2/114284319/ecu_orig.jpg"
         style="max-width: 20rem;"
       >
-        <b-card-text>Electrical Engineering students developing the first ever electrical vehicle systems at UIC.</b-card-text>
+        <b-card-text> The avionics team is dedicated to the development of the first ever unmanned aerial vehicle at VESE.</b-card-text>
         <b-button to="#">Read More</b-button>
       </b-card>
     </b-card-group>
