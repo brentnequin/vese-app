@@ -11,6 +11,9 @@
                 <h1>{{ event.title }}</h1>
                 <p class="text-muted">{{ event.starttime }} - {{ event.endtime }} | {{ event.date }}</p>
                 <p>{{ event.fulldescription}}</p>
+                <div class="d-flex justify-content-center">
+                    <b-button v-for="(link, index) in event.links" v-bind:key="index" to="link.to" class="mx-3">{{ link.name }}</b-button>
+                </div>
             </b-media>
         </b-container>
     </page>
@@ -27,7 +30,17 @@ export default {
                 starttime: "8:00am",
                 endtime: "9:00am",
                 excerpt: "It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time",
-                fulldescription: "Lou Malnati's Pizzeria is an American Chicago-style pizza restaurant chain headquartered in Northbrook, Illinois. It was founded by the son of Rudy Malnati, who was instrumental in developing the recipe for Chicago-style pizza, and it has become one of the Chicago area's best-known local lines of pizza restaurants."
+                fulldescription: "Lou Malnati's Pizzeria is an American Chicago-style pizza restaurant chain headquartered in Northbrook, Illinois. It was founded by the son of Rudy Malnati, who was instrumental in developing the recipe for Chicago-style pizza, and it has become one of the Chicago area's best-known local lines of pizza restaurants.",
+                links: [
+                    {
+                        "name": "Sign Up",
+                        "to": "#"
+                    },
+                    {
+                        "name": "About It's Pizza Time",
+                        "to": "#"
+                    },
+                ]
             }
         }
     }
