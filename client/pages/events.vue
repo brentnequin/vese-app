@@ -9,7 +9,7 @@
         <ul class="list-unstyled">
           <b-media class="mb-2" tag="li" v-for="(event, index) in eventsLoaded" v-bind:key="index">
             <template #aside>
-              <b-img blank blank-color="#abc" width="128" alt="placeholder"></b-img>
+              <b-img src="https://cdn.vox-cdn.com/thumbor/jW1i6Uqp0JwSMvDFHmF2xWmJU6g=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/9186447/lou_malnati_s.0.jpg" width="128" alt="placeholder"></b-img>
             </template>
             <h5 class="mt-0 mb-1">{{ event.title }}</h5>
             <p class="text-muted">{{ event.starttime }} - {{ event.endtime }} | {{ event.date }}</p>
