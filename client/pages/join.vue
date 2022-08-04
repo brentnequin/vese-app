@@ -1,5 +1,5 @@
 <template>
-<b-container class="my-5">
+<b-container class="my-5" slot="content">
     <h1>
         Join the Team
     </h1>

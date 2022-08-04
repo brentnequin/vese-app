@@ -1,14 +1,18 @@
 <template>
-  <b-container class="my-5">    
-    <masthead></masthead>
-    <jumbotron-hero bg-image-src="/VESE-01.png" bg-color="black" contain>
-    </jumbotron-hero>
+<page>
+  <jumbotron-hero
+    slot="masthead"
+    bg-img-src="rohan-gangopadhyay-heIaYq6A7tg-unsplash.jpg"
+    fluid
+  />
+  <b-container class="my-5" slot="content">
+    <jumbotron-hero bg-img-src="/VESE-01.png" bg-color="grey" contain style="transform: translateY(-8rem)" />
     <b-jumbotron class="mb-5">
       <p>Expand the knowledge of students interested in vehicle electronics and systems engineering through hands on
         projects and close work with companies.</p>
       <divider />
       <p>Click the links below to learn more about VESE.</p>
-      <b-button variant="info" to="/about">About VESE</b-button>
+      <b-button variant="primary" to="/about">About VESE</b-button>
       <b-button variant="secondary" to="#current-projects">Current Projects</b-button>
       <b-button variant="secondary" to="/gallery">Gallery</b-button>
     </b-jumbotron>
@@ -43,14 +47,13 @@
       </b-card>
     </b-card-group>
   </b-container>
-
+  </page>
 </template>
 
 <script>
-import JumbotronHero from '../components/JumbotronHero.vue'
-import Masthead from '~/components/Masthead.vue'
+import JumbotronHero from '~/components/JumbotronHero.vue';
 export default {
-  components: { JumbotronHero, Masthead },
-  name: 'IndexPage'
+    name: "IndexPage",
+    components: { JumbotronHero }
 }
 </script>
