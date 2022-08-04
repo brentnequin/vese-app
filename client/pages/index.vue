@@ -19,8 +19,8 @@
 
     <divider />
 
-    <h2 id="current-projects">Current Projects</h2>
-    <b-card-group deck>
+    <h1 id="current-projects" class="d-flex justify-content-center">Current Projects</h1>
+    <b-card-group deck class="d-flex justify-content-center mt-5">
       <b-card 
         title="FSAE Electric Vehicle"
         img-src="https://vese-uic.weebly.com/uploads/1/1/4/2/114284319/veseneon_orig.png"
