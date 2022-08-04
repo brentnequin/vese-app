@@ -19,41 +19,45 @@
 
     <divider />
 
-    <h1 id="current-projects" class="d-flex justify-content-center">Current Projects</h1>
-    <b-card-group deck class="d-flex justify-content-center mt-5">
+    <h1 id="current-projects" class="d-flex justify-content-center mt-5">Current Projects</h1>
+    <b-row class="mt-5" align-h="center">
       <b-card 
-        title="FSAE Electric Vehicle"
-        img-src="https://vese-uic.weebly.com/uploads/1/1/4/2/114284319/veseneon_orig.png"
+        v-for="(project, index) in projects" v-bind:key="index"
+        :title="project.title"
+        :img-src="project.imgsrc"
         style="max-width: 20rem;"
+        class="m-2"
       >
-        <b-card-text>VESE is leading the push for developing, manufacturing and racing the first ever UIC FSAE Electric vehicle.</b-card-text>
+        <b-card-text>{{ project.text }}</b-card-text>
         <b-button to="#">Read More</b-button>
       </b-card>
-      <b-card 
-        title="Mechanical Team"
-        img-src="https://vese-uic.weebly.com/uploads/1/1/4/2/114284319/tesla-ipad-3_orig.jpg"
-        style="max-width: 20rem;"
-      >
-        <b-card-text>Mechanical Engineering students apply the information learned from class or on their own time to develop the systems of the FSAE Electric vehicle.</b-card-text>
-        <b-button to="#">Read More</b-button>
-      </b-card>
-      <b-card 
-        title="Electrical team"
-        img-src="https://vese-uic.weebly.com/uploads/1/1/4/2/114284319/ecu_orig.jpg"
-        style="max-width: 20rem;"
-      >
-        <b-card-text>Electrical Engineering students developing the first ever electrical vehicle systems at UIC.</b-card-text>
-        <b-button to="#">Read More</b-button>
-      </b-card>
-    </b-card-group>
+    </b-row>
   </b-container>
   </page>
 </template>
 
 <script>
-import JumbotronHero from '~/components/JumbotronHero.vue';
 export default {
-    name: "IndexPage",
-    components: { JumbotronHero }
+    data() {
+      return {
+        projects: [
+          {
+            "title": "FSAE Electric Vehicle",
+            "imgsrc": "https://vese-uic.weebly.com/uploads/1/1/4/2/114284319/veseneon_orig.png",
+            "text": "VESE is leading the push for developing, manufacturing and racing the first ever UIC FSAE Electric vehicle."
+          },
+          {
+            "title": "Mechanical Team",
+            "imgsrc": "https://vese-uic.weebly.com/uploads/1/1/4/2/114284319/tesla-ipad-3_orig.jpg",
+            "text": "Mechanical Engineering students apply the information learned from class or on their own time to develop the systems of the FSAE Electric vehicle."
+          },
+          {
+            "title": "Electrical team",
+            "imgsrc": "https://vese-uic.weebly.com/uploads/1/1/4/2/114284319/ecu_orig.jpg",
+            "text": "Electrical Engineering students developing the first ever electrical vehicle systems at UIC."
+          }
+        ]
+      }
+    }
 }
 </script>

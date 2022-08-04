@@ -1,20 +1,22 @@
 <template>
     <page>
         <b-container class="my-5" slot="content">
-            <b-media>
-                <template #aside>
+            <b-row>
+                <b-col md="auto" lg="5" class="d-flex justify-content-center mb-5">
                     <b-img
                         src="https://cdn.vox-cdn.com/thumbor/jW1i6Uqp0JwSMvDFHmF2xWmJU6g=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/9186447/lou_malnati_s.0.jpg"
-                        width="300" alt="placeholder" class="mr-3">
+                        alt="placeholder" class="mr-3" fluid>
                     </b-img>
-                </template>
-                <h1>{{ event.title }}</h1>
-                <p class="text-muted">{{ event.starttime }} - {{ event.endtime }} | {{ event.date }}</p>
-                <p>{{ event.fulldescription}}</p>
-                <div class="d-flex justify-content-center">
-                    <b-button v-for="(link, index) in event.links" v-bind:key="index" :to="link.to" class="mx-3">{{ link.name }}</b-button>
-                </div>
-            </b-media>
+                </b-col>
+                <b-col>
+                    <h1>{{ event.title }}</h1>
+                    <p class="text-muted">{{ event.starttime }} - {{ event.endtime }} | {{ event.date }}</p>
+                    <p>{{ event.fulldescription}}</p>
+                    <div class="d-flex justify-content-center mt-5">
+                        <b-button v-for="(link, index) in event.links" v-bind:key="index" :to="link.to" class="mx-3">{{ link.name }}</b-button>
+                    </div>
+                </b-col>
+            </b-row>
         </b-container>
     </page>
 </template>
