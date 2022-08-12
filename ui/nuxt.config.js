@@ -16,12 +16,12 @@ export default {
     ]
   },
 
-  rules: [
-    {
-      test: /\.s[ac]ss$/i,
-      use: ['style-loader', 'css-loader', 'sass-loader']
-    }
-  ],
+  // rules: [
+  //   {
+  //     test: /\.s[ac]ss$/i,
+      // use: ['style-loader', 'css-loader', 'sass-loader']
+  //   }
+  // ],
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -60,11 +60,11 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    loaders: {
-      sass: { implementation: require('sass') },
-      scss: { implementation: require('sass') },
+  // build: {
+  //   loaders: {
+  //     sass: { implementation: require('sass') },
+  //     scss: { implementation: require('sass') },
 
-    }
-  }
+  //   }
+  // }
 }
