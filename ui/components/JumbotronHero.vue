@@ -20,9 +20,8 @@ export default {
     },
     computed: {
         backgroundObject() {
-            const imagePath = this.$img(this.bgImgSrc)
             return {
-                backgroundImage: `url(${imagePath})`,
+                backgroundImage: `url(${this.bgImgSrc})`,
                 backgroundSize: this.contain ? 'contain' : 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
