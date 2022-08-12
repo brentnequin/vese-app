@@ -1,5 +1,5 @@
 <template>
-    <content>
+    <content class="content">
         <slot name="masthead" />
         <slot name="content" />
     </content>

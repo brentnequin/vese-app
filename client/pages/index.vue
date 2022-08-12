@@ -5,7 +5,7 @@
     bg-img-src="rohan-gangopadhyay-heIaYq6A7tg-unsplash.jpg"
     fluid
   />
-  <b-container class="my-5" slot="content">
+  <b-container class="my-5 content" slot="content">
     <jumbotron-hero bg-img-src="/VESE-01.png" bg-color="grey" contain style="transform: translateY(-8rem)" />
     <b-jumbotron class="mb-5">
       <p>Expand the knowledge of students interested in vehicle electronics and systems engineering through hands on
@@ -61,3 +61,9 @@ export default {
     }
 }
 </script>
+
+<style>
+.content {
+    background-color: white;
+}
+</style>
