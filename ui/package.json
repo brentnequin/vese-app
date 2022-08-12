@@ -4,11 +4,11 @@
   "private": true,
   "engines": {},
   "scripts": {
-    "dev": "nuxt client",
-    "build": "nuxt build client",
-    "start": "nuxt start client",
-    "generate": "nuxt generate client",
-    "preview": "nuxt build client && nuxt start client",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "preview": "nuxt build && nuxt start",
     "help": "nuxt help"
   },
   "dependencies": {
