@@ -10,8 +10,8 @@
                 </b-col>
                 <b-col>
                     <h1>{{ event.title }}</h1>
-                    <p class="text-muted">{{ event.starttime }} - {{ event.endtime }} | {{ event.date }}</p>
-                    <p>{{ event.fulldescription}}</p>
+                    <p class="text-muted">{{ datetimeFormatted(event.time_start) }}</p>
+                    <p>{{ event.description}}</p>
                     <div class="d-flex justify-content-center mt-5">
                         <b-button v-for="(link, index) in event.links" v-bind:key="index" :to="link.to" class="mx-3">{{ link.name }}</b-button>
                     </div>
@@ -23,27 +23,30 @@
 
 <script>
 export default {
-    props: ['id'],
+
     data() {
         return {
-            event: {
-                title: "It's Pizza Time",
-                date: "Aug 3, 2022",
-                starttime: "8:00am",
-                endtime: "9:00am",
-                excerpt: "It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time",
-                fulldescription: "Lou Malnati's Pizzeria is an American Chicago-style pizza restaurant chain headquartered in Northbrook, Illinois. It was founded by the son of Rudy Malnati, who was instrumental in developing the recipe for Chicago-style pizza, and it has become one of the Chicago area's best-known local lines of pizza restaurants.",
-                links: [
-                    {
-                        "name": "Sign Up",
-                        "to": "#"
-                    },
-                    {
-                        "name": "About It's Pizza Time",
-                        "to": "#"
-                    },
-                ]
-            }
+            event: {}
+        }
+    },
+
+    mounted() {
+        this.getEvent(this.$route.params.id)
+        console.log(this.$route.params.id)
+    },
+    
+    methods: {
+        async getEvent(id) {
+            let res = await this.$store.dispatch("getEvent", {id: id});
+            console.log(res.data)
+            this.event = res.data;
+        },
+        datetimeFormatted(datetimeString) {
+            if (!datetimeString) return ""
+            const datetime = new Date(datetimeString)
+            let time = datetime.toLocaleTimeString('en-us', { hour: '2-digit', minute:'2-digit' })
+            let date = datetime.toLocaleDateString('en-us', { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' })
+            return [time, " - ", date].join('')
         }
     }
 }

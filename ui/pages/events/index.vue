@@ -3,7 +3,7 @@
     <h1>Events</h1>
     <b-row>
       <b-col md="auto" class="mt-5">
-        <b-calendar class="d-flex justify-content-center" v-model="value" @context="onContext" locale="en-US"></b-calendar>
+        <b-calendar class="d-flex justify-content-center" locale="en-US"></b-calendar>
       </b-col>
       <b-col class="mt-5">
         <ul class="list-unstyled">
@@ -16,7 +16,7 @@
             <b-link :to="'events/' + event.id">
               <h5 class="mt-0 mb-1">{{ event.title }}</h5>
             </b-link>
-            <p class="text-muted">{{ event.starttime }} - {{ event.endtime }} | {{ event.date }}</p>
+            <p class="text-muted">{{ datetimeFormatted(event.time_start) }}</p>
             <p class="mb-0">{{ event.description }}</p>
             <b-button class="mt-3" :to="'events/' + event.id">Read More</b-button>
           </b-media>
@@ -31,71 +31,39 @@
 
 <script>
 export default {
+
   methods: {
+    async getEvents() {
+      let res = await this.$store.dispatch("getEvents");
+      this.events = res.data;
+    },
     loadMoreEvents() {
       this.length = this.length + 3;
       if (this.length >= this.events.length) this.allEventsLoaded = true;
     },
+    datetimeFormatted(datetimeString) {
+      const datetime = new Date(datetimeString)
+      let time = datetime.toLocaleTimeString('en-us', { hour: '2-digit', minute:'2-digit' })
+      let date = datetime.toLocaleDateString('en-us', { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' })
+      return [time, " - ", date].join('')
+    }
   },
+
+  mounted() {
+    this.getEvents()
+  },
+
   computed: {
     eventsLoaded() {
       return this.events.slice(0, this.length);
-    },
+    }
   },
+
   data() {
     return {
       length: 3,
       allEventsLoaded: false,
-      events: [
-        {
-          "title": "It's Pizza Time",
-          "date": "Aug 3, 2022",
-          "starttime": "8:00am",
-          "endtime": "9:00am",
-          "description": "It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time",
-          "id": "its-pizza-time-aug0302022"
-        },
-        {
-          "title": "It's Pizza Time",
-          "date": "Aug 3, 2022",
-          "starttime": "8:00am",
-          "endtime": "9:00am",
-          "description": "It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time",
-          "id": "its-pizza-time-aug0302022"
-        },
-        {
-          "title": "It's Pizza Time",
-          "date": "Aug 3, 2022",
-          "starttime": "8:00am",
-          "endtime": "9:00am",
-          "description": "It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time",
-          "id": "its-pizza-time-aug0302022"
-        },
-        {
-          "title": "It's Pizza Time",
-          "date": "Aug 3, 2022",
-          "starttime": "8:00am",
-          "endtime": "9:00am",
-          "description": "It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time",
-          "id": "its-pizza-time-aug0302022"
-        },
-        {
-          "title": "It's Pizza Time",
-          "date": "Aug 3, 2022",
-          "starttime": "8:00am",
-          "endtime": "9:00am",
-          "description": "It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time",
-          "id": "its-pizza-time-aug0302022"
-        },
-        {
-          "title": "It's Pizza Time",
-          "date": "Aug 3, 2022",
-          "starttime": "8:00am",
-          "endtime": "9:00am",
-          "description": "It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time",
-          "id": "its-pizza-time-aug0302022"
-        },
-      ]
+      events: []
     }
   },
 }
