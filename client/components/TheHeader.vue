@@ -1,8 +1,8 @@
 <template>
     <header>
         <b-navbar toggleable="lg" type="dark" variant="secondary">
-            <b-navbar-brand to="/" class="brand">
-                <b-img fluid src="~/static/VESELogoPatchWhite.svg" class="d-inline-block align-center logo" alt="logo"></b-img>
+            <b-navbar-brand to="/" class="brand d-flex justify-content-center">
+                <b-img width="47.5" src="~/static/VESELogoPatchWhite.svg" class="d-inline-block mr-2 align-center logo" alt="logo" />
             </b-navbar-brand>
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
             <b-collapse id="nav-collapse" is-nav>
