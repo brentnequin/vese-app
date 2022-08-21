@@ -7,8 +7,8 @@
   />
   <b-container class="my-5" slot="content">
     <jumbotron-hero bg-img-src="/VESE-01.png" bg-color="black" contain style="transform: translateY(-8rem)" />
-    <b-jumbotron class="mb-5">
-      <h1>Our Goal</h1>
+    <b-jumbotron class="mb-5" contain style="transform: translateY(-4rem)" >
+      <h2>Our Goal</h2>
       <p>To expand the knowledge of students interested in vehicle electronics and systems engineering through hands on
         projects and close work with companies.</p>
       <divider />
@@ -19,9 +19,8 @@
       <b-button variant="secondary" to="/login">Join Us</b-button> 
     </b-jumbotron>
 
-    <divider />
-
     <h2 id="current-projects">News</h2>
+    <divider />
     <b-card-group deck>
       <b-card 
         title="Mechatronics Team"
@@ -50,12 +49,18 @@
     </b-card-group>
   </b-container>
   </page>
+
 </template>
 
 <script>
 import JumbotronHero from '~/components/JumbotronHero.vue';
 export default {
     name: "IndexPage",
-    components: { JumbotronHero }
-}
+    components: { JumbotronHero },
+};
 </script>
+
+
+
+
+

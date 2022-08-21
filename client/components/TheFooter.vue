@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <b-container>
+        <b-container fluid style="background-color:black">
             <divider />
             <b-row align-h="between">
                 <b-col><p class="my-3">© VESE 2022</p></b-col>
@@ -16,6 +16,10 @@
 
 <style>
 .icon {
-    color: inherit
+    color: white
+}
+
+.my-3{
+    color: white
 }
 </style>
