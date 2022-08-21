@@ -38,7 +38,6 @@ export default {
     methods: {
         async getEvent(id) {
             let res = await this.$store.dispatch("getEvent", {id: id});
-            console.log(res.data)
             this.event = res.data;
         },
         datetimeFormatted(datetimeString) {

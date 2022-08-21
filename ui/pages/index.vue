@@ -5,35 +5,50 @@
     bg-img-src="rohan-gangopadhyay-heIaYq6A7tg-unsplash.jpg"
     fluid
   />
-  <b-container class="my-5 content" slot="content">
-    <jumbotron-hero bg-img-src="/VESE-01.png" bg-color="grey" contain style="transform: translateY(-8rem)" />
-    <b-jumbotron class="mb-5">
-      <p>Expand the knowledge of students interested in vehicle electronics and systems engineering through hands on
-        projects and close work with companies.</p>
-      <divider />
-      <p>Click the links below to learn more about VESE.</p>
-      <b-button variant="primary" to="/about">About VESE</b-button>
-      <b-button variant="secondary" to="#current-projects">Current Projects</b-button>
-      <b-button variant="secondary" to="#current-projects">Gallery</b-button>
-    </b-jumbotron>
+  <div class="my-5 content" slot="content">
+
+    <Section>
+      <jumbotron-hero bg-img-src="/VESE-01.png" bg-color="grey" contain style="transform: translateY(-8rem)" />
+
+    </Section>
+
+    <Section>
+      <b-jumbotron class="mb-5">
+        <p>Expand the knowledge of students interested in vehicle electronics and systems engineering through hands on
+          projects and close work with companies.</p>
+        <divider />
+        <p>Click the links below to learn more about VESE.</p>
+        <b-button variant="primary" to="/about">About VESE</b-button>
+        <b-button variant="secondary" to="#current-projects">Current Projects</b-button>
+        <b-button variant="secondary" to="#current-projects">Gallery</b-button>
+      </b-jumbotron>
+
+    </Section>
 
     <divider />
 
-    <h1 id="current-projects" class="d-flex justify-content-center mt-5">Current Projects</h1>
-    <b-row class="mt-5" align-h="center">
-      <b-card 
-        v-for="(project, index) in projects" v-bind:key="index"
-        :title="project.title"
-        :img-src="project.imgsrc"
-        style="max-width: 20rem;"
-        class="m-2"
-      >
-        <b-card-text>{{ project.text }}</b-card-text>
-        <b-button to="#">Read More</b-button>
-      </b-card>
-    </b-row>
-  </b-container>
-  </page>
+    <Section>
+      <h1 id="current-projects" class="d-flex justify-content-center mt-5">Current Projects</h1>
+      <b-row class="mt-5" align-h="center">
+        <b-card 
+          v-for="(project, index) in projects" v-bind:key="index"
+          :title="project.title"
+          :img-src="project.imgsrc"
+          style="max-width: 20rem;"
+          class="m-2"
+        >
+          <b-card-text>{{ project.text }}</b-card-text>
+          <b-button to="#">Read More</b-button>
+        </b-card>
+      </b-row>
+    </Section>
+
+    <divider />
+
+    <Section fluid>This is a fluid section</Section>
+
+  </div>
+</page>
 </template>
 
 <script>
