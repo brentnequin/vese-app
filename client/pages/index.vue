@@ -9,7 +9,7 @@
     <jumbotron-hero bg-img-src="/VESE-01.png" bg-color="black" contain style="transform: translateY(-8rem)" />
     <b-jumbotron class="mb-5" contain style="transform: translateY(-4rem)" >
       <h2>Our Goal</h2>
-      <p>To expand the knowledge of students interested in vehicle electronics and systems engineering through hands on
+      <p>To expand the knowledge base of students interested in vehicle electronics and systems engineering through hands on
         projects and close work with companies.</p>
       <divider />
       <p>Click the links below to learn more about VESE.</p>
