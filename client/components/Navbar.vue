@@ -10,6 +10,7 @@
         </b-tabs>
     </div>
 </template>
+
 <style>
 .tab {
   color: black
