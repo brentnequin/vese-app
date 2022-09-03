@@ -49,51 +49,51 @@ export default {
       events: [
         {
           "title": "It's Pizza Time",
-          "date": "Aug 3, 2022",
-          "starttime": "8:00am",
-          "endtime": "9:00am",
+          "date": "Sep 19, 2022",
+          "starttime": "5:00pm",
+          "endtime": "6:00pm",
           "description": "It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time",
-          "id": "its-pizza-time-aug0302022"
+          "id": "its-pizza-time-sep1902022"
         },
         {
           "title": "It's Pizza Time",
-          "date": "Aug 3, 2022",
-          "starttime": "8:00am",
-          "endtime": "9:00am",
+          "date": "Sep 26, 2022",
+          "starttime": "5:00pm",
+          "endtime": "6:00pm",
           "description": "It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time",
-          "id": "its-pizza-time-aug0302022"
+          "id": "its-pizza-time-sep2602022"
         },
         {
           "title": "It's Pizza Time",
-          "date": "Aug 3, 2022",
-          "starttime": "8:00am",
-          "endtime": "9:00am",
+          "date": "Oct 03, 2022",
+          "starttime": "5:00pm",
+          "endtime": "6:00pm",
           "description": "It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time",
-          "id": "its-pizza-time-aug0302022"
+          "id": "its-pizza-time-oct0302022"
         },
         {
           "title": "It's Pizza Time",
-          "date": "Aug 3, 2022",
-          "starttime": "8:00am",
-          "endtime": "9:00am",
+          "date": "Oct 10, 2022",
+          "starttime": "5:00pm",
+          "endtime": "6:00pm",
           "description": "It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time",
-          "id": "its-pizza-time-aug0302022"
+          "id": "its-pizza-time-oct1002022"
         },
         {
           "title": "It's Pizza Time",
-          "date": "Aug 3, 2022",
-          "starttime": "8:00am",
-          "endtime": "9:00am",
+          "date": "Oct 17, 2022",
+          "starttime": "5:00pm",
+          "endtime": "6:00pm",
           "description": "It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time",
-          "id": "its-pizza-time-aug0302022"
+          "id": "its-pizza-time-oct1702022"
         },
         {
           "title": "It's Pizza Time",
-          "date": "Aug 3, 2022",
-          "starttime": "8:00am",
-          "endtime": "9:00am",
+          "date": "Oct 24, 2022",
+          "starttime": "5:00pm",
+          "endtime": "6:00pm",
           "description": "It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time",
-          "id": "its-pizza-time-aug0302022"
+          "id": "its-pizza-time-oct2402022"
         },
       ]
     }

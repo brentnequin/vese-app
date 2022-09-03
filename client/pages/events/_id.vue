@@ -28,9 +28,9 @@ export default {
         return {
             event: {
                 title: "It's Pizza Time",
-                date: "Aug 3, 2022",
-                starttime: "8:00am",
-                endtime: "9:00am",
+                date: "Sep 19, 2022",
+                starttime: "5:00pm",
+                endtime: "6:00pm",
                 excerpt: "It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time It's Pizza Time",
                 fulldescription: "Lou Malnati's Pizzeria is an American Chicago-style pizza restaurant chain headquartered in Northbrook, Illinois. It was founded by the son of Rudy Malnati, who was instrumental in developing the recipe for Chicago-style pizza, and it has become one of the Chicago area's best-known local lines of pizza restaurants.",
                 links: [
