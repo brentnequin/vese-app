@@ -16,6 +16,8 @@ export default {
     ]
   },
 
+  ssr: false,
+
   // rules: [
   //   {
   //     test: /\.s[ac]ss$/i,
