@@ -86,6 +86,8 @@ export default {
     bootstrapVueCSS: false
   },
 
+  build: {}
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   // build: {
   //   loaders: {
