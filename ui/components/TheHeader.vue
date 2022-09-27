@@ -2,7 +2,8 @@
     <header>
         <b-navbar toggleable="lg" type="dark" variant="secondary">
             <b-navbar-brand to="/" class="brand d-flex justify-content-center">
-                <b-img width="47.5" src="~/static/VESELogoPatchWhite.svg" class="d-inline-block mr-2 align-center logo" alt="logo" />
+                <b-img width="47.5" src="~/static/favicon.svg" class="d-inline-block mr-2 align-center logo" alt="logo" />
+                <p class="mb-0 align-self-center"></p>
             </b-navbar-brand>
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
             <b-collapse id="nav-collapse" is-nav>
@@ -18,3 +19,13 @@
         </b-navbar>
     </header>
 </template>
+
+<script>
+export default {
+    methods: {
+        loginWithGoogle() {
+            this.$auth.loginWith("google")
+        }
+    },
+}
+</script>

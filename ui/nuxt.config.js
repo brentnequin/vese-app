@@ -16,12 +16,12 @@ export default {
     ]
   },
 
-  rules: [
-    {
-      test: /\.s[ac]ss$/i,
-      use: ['style-loader', 'css-loader', 'sass-loader']
-    }
-  ],
+  // rules: [
+  //   {
+  //     test: /\.s[ac]ss$/i,
+      // use: ['style-loader', 'css-loader', 'sass-loader']
+  //   }
+  // ],
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -45,13 +45,37 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxt/image',
+    '@nuxtjs/auth'
+  ],
+
+  serverMiddleware: [
+    '~/api/index.js'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
+    // proxyHeaders: false,
+    // credentials: false
+  },
+
+  auth: {
+    strategies: {
+      google: {
+        client_id: process.env.GCLOUD_CLIENT_ID,
+        codeChallengeMethod: '',
+        scope: ['profile', 'email'],
+        responseType: 'token token_id',
+        endpoints: {}
+      }
+    },
+    redirect: {
+      login: '/login',
+      logout: '/',
+      home: '/',
+      callback: '/login/callback'
+    }
   },
 
   bootstrapVue: {
@@ -61,11 +85,11 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    loaders: {
-      sass: { implementation: require('sass') },
-      scss: { implementation: require('sass') },
+  // build: {
+  //   loaders: {
+  //     sass: { implementation: require('sass') },
+  //     scss: { implementation: require('sass') },
 
-    }
-  }
+  //   }
+  // }
 }
