@@ -45,22 +45,36 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/auth-next'
+    '@nuxtjs/auth'
+  ],
+
+  serverMiddleware: [
+    '~/api/index.js'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: 'https://vese-api.herokuapp.com',
-    proxyHeaders: false,
-    credentials: false
+    baseURL: '/',
+    // proxyHeaders: false,
+    // credentials: false
   },
 
   auth: {
     strategies: {
       google: {
-        clientId: '...'
-      },
+        client_id: process.env.GCLOUD_CLIENT_ID,
+        codeChallengeMethod: '',
+        scope: ['profile', 'email'],
+        responseType: 'token token_id',
+        endpoints: {}
+      }
+    },
+    redirect: {
+      login: '/login',
+      logout: '/',
+      home: '/',
+      callback: '/login/callback'
     }
   },
 
