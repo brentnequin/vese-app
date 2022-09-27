@@ -11,8 +11,9 @@
                     <b-nav-item to="/">Home</b-nav-item>
                     <b-nav-item to="/about">About</b-nav-item>                    
                     <b-nav-item to="/events">Events</b-nav-item>
-                    <b-nav-item to="#">Members</b-nav-item>
-                    <b-nav-item @click="loginWithGoogle()">Log In</b-nav-item>
+                    <b-nav-item to="/members">Members</b-nav-item>
+                    <b-nav-item to="/login">Log In</b-nav-item>
+                    <b-nav-item to="#">Donate</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
