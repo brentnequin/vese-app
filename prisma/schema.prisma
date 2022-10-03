@@ -7,9 +7,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model alembic_version {
-  version_num String @id(map: "alembic_version_pkc") @db.VarChar(32)
-}
+// model alembic_version {
+//   version_num String @id(map: "alembic_version_pkc") @db.VarChar(32)
+// }
 
 model Event {
   id          Int       @id @default(autoincrement())
@@ -21,19 +21,19 @@ model Event {
 }
 
 model User {
-  id     Int    @id @default(autoincrement())
-  username String @unique
-  email  String @unique
-  first_name   String
-  last_name    String
-  role Role @default(USER)
-  profile Profile?
+  id         Int      @id @default(autoincrement())
+  username   String   @unique
+  email      String   @unique
+  first_name String
+  last_name  String
+  role       Role     @default(USER)
+  profile    Profile?
 }
 
 model Profile {
-  id Int @id @default(autoincrement())
-  bio String
-  user User @relation(fields: [id], references: [id])
+  id   Int    @id @default(autoincrement())
+  bio  String
+  user User   @relation(fields: [id], references: [id])
 }
 
 enum Role {

@@ -1,4 +1,8 @@
 export default {
+  // Target: https://go.nuxtjs.dev/config-target
+  // target: 'static',
+  ssr: false,
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'VESE',
@@ -15,15 +19,6 @@ export default {
       { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
     ]
   },
-
-  ssr: false,
-
-  // rules: [
-  //   {
-  //     test: /\.s[ac]ss$/i,
-      // use: ['style-loader', 'css-loader', 'sass-loader']
-  //   }
-  // ],
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -58,8 +53,6 @@ export default {
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
-    // proxyHeaders: false,
-    // credentials: false
   },
 
   auth: {
@@ -86,14 +79,7 @@ export default {
     bootstrapVueCSS: false
   },
 
-  build: {}
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  // build: {
-  //   loaders: {
-  //     sass: { implementation: require('sass') },
-  //     scss: { implementation: require('sass') },
-
-  //   }
-  // }
+  build: {
+  }
 }
