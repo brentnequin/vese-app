@@ -49,3 +49,5 @@ app.get(`/api/user/:username`, async (req, res) => {
     })
     res.json(user)
 })
+
+module.exports = app;
