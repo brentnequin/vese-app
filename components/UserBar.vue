@@ -2,7 +2,7 @@
     <div v-if="$auth.loggedIn">
         <p>Logged In As: {{ $auth.user.email }}</p>
         <!-- using $event special variable -->
-        <button @click="warn('HAHAHAHAHAHAHAHA!!!.', $event)">
+        <button @click="warn('An Error Ocurred.', $event)">
         Log Out
         </button>     
     </div>
