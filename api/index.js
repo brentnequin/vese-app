@@ -15,6 +15,22 @@ app.get(`/api/login`, async (req, res) => {
     res.json({})
 })
 
+app.get(`/api/events`, async (req, res) => {
+    const events = await prisma.event.findMany({
+    })
+    res.json(events)
+})
+
+app.get(`/api/event/:id`, async (req, res) => {
+    const { id } = req.params
+    const event = await prisma.event.findUnique({
+      where: {
+        id: Number(id),
+      },
+    })
+    res.json(event)
+})
+
 app.post(`/api/user`, async (req, res) => {
     const result = await prisma.user.client({
         data: {
