@@ -1,5 +1,15 @@
 $primary: pink;
 $secondary: black;
+$linkedin: #005b8e;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    'linkedin': $linkedin
+  ),
+  $theme-colors
+);
 
 @import 'bootstrap/scss/bootstrap.scss';
 @import 'bootstrap-vue/src/index.scss';
+
